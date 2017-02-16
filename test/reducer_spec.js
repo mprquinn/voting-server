@@ -48,4 +48,12 @@ describe('reducer', () => {
       entries: []
     }));
   });
+
+  it('has an intial state', () => {
+    const action = {type: 'SET_ENTRIES', entries: ['Trainspotting']};
+    const nextState = reducer(undefined, action);
+    expext(nextState).to.equal(fromJS({
+      entries: ['Trainspotting']
+    }));
+  })
 });
