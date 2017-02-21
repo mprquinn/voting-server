@@ -26,7 +26,7 @@ describe('reducer', () => {
       vote: {
         pair: ['Trainspotting', '28 Days Later']
       },
-      entries []
+      entries: []
     }));
   });
 
@@ -52,7 +52,7 @@ describe('reducer', () => {
   it('has an intial state', () => {
     const action = {type: 'SET_ENTRIES', entries: ['Trainspotting']};
     const nextState = reducer(undefined, action);
-    expext(nextState).to.equal(fromJS({
+    expect(nextState).to.equal(fromJS({
       entries: ['Trainspotting']
     }));
   });
